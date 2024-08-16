@@ -25,16 +25,26 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="text-black flex flex-col items-center">
-        <h3>
-          Our Services
-        </h3>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          <li>Make Up</li>
-          <li>Hair</li>
-          <li>Styling</li>
-          <li>Eyebrows</li>
-        </ul>
+      <section className={`text-black flex items-center justify-evenly ${greyQo.className}`}>
+        <aside>
+          <Image
+            src="/services.jpg"
+            alt="Vercel Logo"
+            width={500}
+            height={24}
+          />
+        </aside>
+        <div>
+          <h3 className={`text-[#f1c290] text-5xl md:text-6xl ${greyQo.className}`}>
+            Our Services
+          </h3>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <li>Make Up</li>
+            <li>Hair</li>
+            <li>Styling</li>
+            <li>Eyebrows</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
