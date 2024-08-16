@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fff
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.text-shadow-heading {
+  text-shadow: 2px 4px 6px;
+}
+
+.text-shadow-body {
+  text-shadow: 1px 1px 2px;
+}
+
+.scroll-icon {
+  top: 0;
+  animation: pulseDown 2s linear infinite;
+}
+
+@keyframes pulseDown {
+  from { transform : translateY(-1em) scale(3) }
+  to   { transform : translateY(2em) scale(0)}
+}
