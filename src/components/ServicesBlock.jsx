@@ -10,40 +10,6 @@ const roboto = Roboto({ subsets: ["latin"], display: "swap", weight: '900' });
 export default function Hero() {
     const services = {
         title: 'Our Services',
-        list: [
-            {
-                img: '/make-up.png',
-                title: 'Make-up',
-                description: `
-                    I create a flawless look that enhances your natural 
-                    beauty for everyday elegance and transforms you with 
-                    bold glamour for those special occasions
-                `
-            },
-            {
-                img: '/hair.png',
-                title: 'Hair',
-                description: `
-                    I provide seamless hair installations for a perfect fit 
-                    and flawless look, along with professional care to keep 
-                    your wigs looking fresh and beautiful
-                `
-            },
-            {
-                img: '/styling.png',
-                title: 'Styling',
-                description: `
-                    Expert styling to help you achieve the perfect look for any event.
-                `
-            },
-            {
-                img: '/eyebrow.png',
-                title: 'Strip Lashes',
-                description: `
-                    Instantly elevate your look with our premium strip lashes.
-                `
-            }
-        ]
     }
     return (
         <section className={`text-black flex flex-col md:flex-row  items-center justify-center md:justify-around pt-4 pb-20 2xl:px-6`}>
@@ -60,9 +26,9 @@ export default function Hero() {
                 Our Services
             </h3>
             <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                { services.list.forEach(service => {
+                { services.list.forEach(service, index=> {
                     return (
-                        <li className="space-y-4 flex flex-col items-center py-3">
+                        <li className="space-y-4 flex flex-col items-center py-3" key="${index}">
                             <div>
                                 <Image
                                 src={service.img}
@@ -79,7 +45,7 @@ export default function Hero() {
                                     { service.description}
                                 </p>
                             </div> 
-                            </li>
+                        </li>
                     )
                 })}
                 

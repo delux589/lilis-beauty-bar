@@ -10,7 +10,7 @@ const roboto = Roboto({ subsets: ["latin"], display: "swap", weight: '900' });
 export default function Hero() {
   return (
     <section className="relative flex flex-col sm:flex-row justify-between items-center h-screen sm:h-full overflow-hidden md:overflow-auto justify-center bg-[#f7bfc2] pt-10 md:pt-24 px-4 md:px-10 2xl:px-40">
-		<div class="space-y-6 md:space-y-10 text-center">
+		<div className="space-y-6 md:space-y-10 text-center">
 			<h1 className={`text-[#8C0000] text-7xl lg:text-9xl text-shadow-heading ${greyQo.className}`}>
 				Lili's Beauty Bar
 			</h1>
